@@ -653,9 +653,6 @@ class CshshlpTdApi(CsHsHlp):
         self.writeLog(u'交易服务器连接成功')
         
         # 登录
-        print('way %s' % self.opEntrustWay)
-        print('password %s' % self.password)
-        print('account_content %s' % self.fundAccount)
         req = {}
         req['identity_type'] = '2'
         req['password_type'] = '2'
