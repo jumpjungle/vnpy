@@ -598,8 +598,8 @@ class CshshlpTdApi(CsHsHlp):
         # 生成op_station        
         #data = json.loads(urllib.urlopen("http://ip.jsontest.com/").read())
         #iip = data["ip"]
-        iip = '114.250.94.120'
-        
+        iip = '127.0.0.1'
+
         c = wmi.WMI()
         mac = None
         lip = None

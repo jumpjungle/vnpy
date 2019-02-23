@@ -281,3 +281,20 @@ vn.py使用github托管其源代码，如果希望贡献代码请使用github的
 ---
 ### License
 MIT
+
+
+#使用说明
+1、更新最新版本的vnpy
+2、在vnpy的目录下执行命令:
+  python setup.py install
+3、在vnpy/examples/VnTrader目录中,
+  替换csauthor.dat 为自己的授权文件
+  修改CSHSHLP_connect.json 为自己的账号和密码
+  检查Hsconfig.ini中的ip情况，必须打开一个ip，不能均为注释
+4、在vnpy/examples/VnTrader目录中；
+  python run.py
+  即可看到运行界面，在界面中点击系统->连接中信期权
+  查看运行界面左下角的日志，看到成交查询成功即可
+  
+
+
