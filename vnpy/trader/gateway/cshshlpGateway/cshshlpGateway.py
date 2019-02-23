@@ -596,10 +596,16 @@ class CshshlpTdApi(CsHsHlp):
         self.password = password        
         
         # 生成op_station        
-        data = json.loads(urllib.urlopen("http://ip.jsontest.com/").read())
-        iip = data["ip"]        
+        #data = json.loads(urllib.urlopen("http://ip.jsontest.com/").read())
+        #iip = data["ip"]
+        iip = '114.250.94.120'
         
         c = wmi.WMI()
+        mac = None
+        lip = None
+        cpu = None
+        hdd = None
+        pi = None
         
         for interface in c.Win32_NetworkAdapterConfiguration(IPEnabled=1):
             mac = interface.MACAddress     # MAC地址
@@ -620,18 +626,18 @@ class CshshlpTdApi(CsHsHlp):
                                                                                     iip,
                                                                                     lip,
                                                                                     mac,
-                                                                                    hd,
+                                                                                    hdd,
                                                                                     pcn,
                                                                                     cpu,
                                                                                     pi)
-        
-        # 读取配置文件 
+
+        # 读取配置文件
         i = self.loadConfig("Hsconfig.ini")
         if i:
             self.writeLog(u'交易加载配置失败，原因：%s' %self.getErrorMsg().decode('GBK'))
             return
         self.writeLog(u'交易加载配置成功')
-        
+
         # 初始化
         i = self.init()
         if i:
@@ -647,6 +653,9 @@ class CshshlpTdApi(CsHsHlp):
         self.writeLog(u'交易服务器连接成功')
         
         # 登录
+        print('way %s' % self.opEntrustWay)
+        print('password %s' % self.password)
+        print('account_content %s' % self.fundAccount)
         req = {}
         req['identity_type'] = '2'
         req['password_type'] = '2'
