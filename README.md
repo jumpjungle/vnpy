@@ -286,7 +286,6 @@ MIT
 #使用说明
 1、更新最新版本的vnpy
 2、在vnpy的目录下执行命令:
-  python setup.py install
 3、在vnpy/examples/VnTrader目录中,
   替换csauthor.dat 为自己的授权文件
   修改CSHSHLP_connect.json 为自己的账号和密码

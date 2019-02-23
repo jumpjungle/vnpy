@@ -36,7 +36,7 @@ elif system == 'Windows':
 # 加载上层应用
 from vnpy.trader.app import (riskManager, ctaStrategy, 
                              spreadTrading, algoTrading,
-                             tradeCopy)
+                             tradeCopy,optionMaster)
 
 
 #----------------------------------------------------------------------
@@ -71,6 +71,7 @@ def main():
     me.addApp(spreadTrading)
     me.addApp(algoTrading)
     me.addApp(tradeCopy)
+    me.addApp(optionMaster)
 
     # 创建主窗口
     mw = MainWindow(me, ee)
