@@ -65,3 +65,4 @@ dist
 *.egg
 *.egg-info
 
+/examples/VnTrader/csauthor.dat
