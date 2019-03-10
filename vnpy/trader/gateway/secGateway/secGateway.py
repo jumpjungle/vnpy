@@ -115,6 +115,8 @@ class SecGateway(VtGateway):
     #----------------------------------------------------------------------
     def subscribe(self, subscribeReq):
         """订阅行情"""
+        print(u"line 118 118 subscribeReq:{}, {}".format(subscribeReq.exchange, subscribeReq.symbol))
+
         self.mdApi.subscribe(subscribeReq)
         
     #----------------------------------------------------------------------
@@ -228,6 +230,8 @@ class SecMdApi(MdApi):
     #----------------------------------------------------------------------
     def subscribe(self, subscribeReq):
         """订阅合约"""
+        print(u"line line 231 subscribeReq:{}, {}".format(subscribeReq.exchange, subscribeReq.symbol))
+
         if self.loginStatus:
             self.reqID += 1
             

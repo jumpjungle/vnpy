@@ -2,7 +2,8 @@
 
 from __future__ import absolute_import
 from vnpy.trader import vtConstant
-from .cshshlpGateway import CshshlpGateway
+# from .cshshlpGateway import CshshlpGateway
+from .cshshlpGateway_1 import CshshlpGateway
 
 gatewayClass = CshshlpGateway
 gatewayName = 'CSHSHLP'

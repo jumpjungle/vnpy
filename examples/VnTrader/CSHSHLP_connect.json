@@ -1,8 +1,8 @@
 {
     "brokerID": "9999",
-    "mdAddress": "tcp://180.168.146.187:10031",
-    "userID": "000300",
-    "ctpPassword": "123456789",
+    "mdAddress": "tcp://203.86.95.187:10915",
+    "userID": "110100001088",
+    "ctpPassword": "123456",
 
     "opEntrustWay": "5",
     "opStation": "111111111",
